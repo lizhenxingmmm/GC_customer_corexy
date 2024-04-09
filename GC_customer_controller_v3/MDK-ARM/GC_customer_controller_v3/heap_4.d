@@ -1,0 +1,13 @@
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+gc_customer_controller_v3\heap_4.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+gc_customer_controller_v3\heap_4.o: D:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+gc_customer_controller_v3\heap_4.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+gc_customer_controller_v3\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+gc_customer_controller_v3\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

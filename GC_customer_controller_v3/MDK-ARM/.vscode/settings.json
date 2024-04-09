@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "joint_task.h": "c",
+        "message_buffer.h": "c",
+        "message_task.h": "c",
+        "drv_can.h": "c",
+        "rmmotor.h": "c",
+        "senddatatask.h": "c",
+        "judge_system.h": "c",
+        "crc.h": "c",
+        "crc8_crc16.h": "c",
+        "nrf24l01.h": "c",
+        "cmath": "c"
+    }
+}
