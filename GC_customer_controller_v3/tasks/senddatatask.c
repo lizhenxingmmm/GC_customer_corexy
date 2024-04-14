@@ -11,7 +11,7 @@
 #include "adc.h"
 #include "NRF24L01.h"
 #include <string.h>
-
+#include "scara_kinematics.h"
 uint8_t TxData[32] = {0,0,0,0};
 
 uint32_t analog_data=0;
@@ -22,7 +22,7 @@ float debug2=0;
 float debug3=0;
 static void Data_Concatenation(uint8_t *data, uint16_t data_lenth);
 extern customer_data_pack data_package;
-
+extern slightly_controll_data slightly_controll_data_1;
 Controller_t tx_data; 
 
 void StartSendDataTask(void const *argument)
@@ -66,15 +66,27 @@ void StartSendDataTask(void const *argument)
 			debug2=666;
 		}
 
-        uint8_t data[DATA_LENGTH] = {0x40, 0x50, 0x60, 0x70};
+        uint8_t data[DATA_LENGTH] = {0x40};
         data_package.angle1=data_package.angle1-0.96;
         data_package.angle2=data_package.angle2+0.43;
         data_package.angle3=data_package.angle3+0.03;
         data_package.angle4=data_package.angle4+0.66;//和工程实车编码值对应
-        memcpy((void*)(&data[0]),(const void*)(&data_package.angle1),4);
-        memcpy((void*)(&data[4]),(const void*)(&data_package.angle2),4);
-        memcpy((void*)(&data[8]),(const void*)(&data_package.angle3),4);
-        memcpy((void*)(&data[12]),(const void*)(&data_package.angle4),4);
+//0x1a:全控制模式
+//0x2a:微调模式
+data[0]=0x2a;
+if(data[0]==0x1a)
+{
+    memcpy((void*)(&data[1]),(const void*)(&data_package.angle1),4);
+        memcpy((void*)(&data[5]),(const void*)(&data_package.angle2),4);
+        memcpy((void*)(&data[9]),(const void*)(&data_package.angle3),4);
+        memcpy((void*)(&data[13]),(const void*)(&data_package.angle4),4);
+}
+if(data[0]==0x2a)
+{
+    memcpy((void*)(&data[1]),(const void*)(&slightly_controll_data_1),sizeof(slightly_controll_data));
+}
+
+        debug3=sizeof(slightly_controll_data);
         //memcpy((void*)&data[0],(const void*)&data_package,sizeof(customer_data_pack));
         Data_Concatenation(data, DATA_LENGTH);
         HAL_UART_Transmit(&huart3, (uint8_t *)(&tx_data), sizeof(tx_data), 50);

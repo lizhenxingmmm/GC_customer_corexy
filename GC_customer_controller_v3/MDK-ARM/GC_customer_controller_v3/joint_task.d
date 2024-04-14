@@ -53,5 +53,6 @@ gc_customer_controller_v3\joint_task.o: ../user/RMmotor.h
 gc_customer_controller_v3\joint_task.o: ../user/pid.h
 gc_customer_controller_v3\joint_task.o: ../user/judge_system.h
 gc_customer_controller_v3\joint_task.o: ../Core/Inc/CRC.h
+gc_customer_controller_v3\joint_task.o: ../user/scara_kinematics.h
 gc_customer_controller_v3\joint_task.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
 gc_customer_controller_v3\joint_task.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h

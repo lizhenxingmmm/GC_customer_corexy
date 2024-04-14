@@ -10,6 +10,7 @@
         "crc.h": "c",
         "crc8_crc16.h": "c",
         "nrf24l01.h": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "scara_kinematics.h": "c"
     }
 }

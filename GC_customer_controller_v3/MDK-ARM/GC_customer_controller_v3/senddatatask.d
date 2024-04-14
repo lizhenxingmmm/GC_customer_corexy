@@ -56,3 +56,5 @@ gc_customer_controller_v3\senddatatask.o: ..\tasks\message_task.h
 gc_customer_controller_v3\senddatatask.o: ../Core/Inc/gpio.h
 gc_customer_controller_v3\senddatatask.o: ../Core/Inc/adc.h
 gc_customer_controller_v3\senddatatask.o: ../user/NRF24L01.h
+gc_customer_controller_v3\senddatatask.o: ../user/scara_kinematics.h
+gc_customer_controller_v3\senddatatask.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h

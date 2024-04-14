@@ -46,6 +46,7 @@
 "gc_customer_controller_v3\nrf24l01.o"
 "gc_customer_controller_v3\crc8_crc16.o"
 "gc_customer_controller_v3\judge_system.o"
+"gc_customer_controller_v3\scara_kinematics.o"
 "gc_customer_controller_v3\joint_task.o"
 "gc_customer_controller_v3\message_task.o"
 "gc_customer_controller_v3\senddatatask.o"
